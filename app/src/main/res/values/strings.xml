@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">一键去签</string>
+
+    <string name="tab_apps">应用</string>
+    <string name="tab_tasks">任务</string>
+    <string name="tab_settings">设置</string>
+
+    <string name="apps_title">去除签名校验</string>
+    <string name="apps_subtitle">选择应用，注入过签组件，重新打包签名</string>
+    <string name="apps_search_hint">搜索应用名或包名</string>
+    <string name="apps_selected">已选择</string>
+    <string name="apps_run">一键去签</string>
+    <string name="apps_run_short">去签</string>
+    <string name="apps_empty">没有匹配的应用</string>
+    <string name="apps_show_system">显示系统应用</string>
+    <string name="apps_loading">正在读取已安装应用…</string>
+    <string name="apps_signature">签名</string>
+    <string name="apps_version">版本</string>
+
+    <string name="dialog_title">去除签名校验</string>
+    <string name="dialog_inject_class">注入类名</string>
+    <string name="dialog_use_origin">使用原包过签</string>
+    <string name="dialog_so_name">注入so库名</string>
+    <string name="dialog_origin_asset">注入原包路径</string>
+    <string name="dialog_origin_file">原包解压路径</string>
+    <string name="dialog_disclaimer">免责声明：该功能仅用于APP安全性测试，请勿用于违法用途，我们不承担由此产生的任何法律责任，使用该功能即表示同意该声明。如果您的产品无法通过该测试，可点击右上角的开源链接获取技术原理及其对抗方式。</string>
+    <string name="dialog_auto_sign">自动签名</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_confirm">确定</string>
+    <string name="dialog_advanced">高级</string>
+    <string name="dialog_rename_package">修改包名</string>
+    <string name="dialog_new_package">新包名</string>
+    <string name="dialog_rename_warning">改包名会让应用变成另一个应用：它自己的数据、推送、第三方 SDK 回调都可能失效，只在需要绕开包名检测时使用。</string>
+
+    <string name="tasks_title">任务</string>
+    <string name="tasks_empty">还没有处理过应用</string>
+    <string name="tasks_running">正在处理 %1$s</string>
+    <string name="tasks_failed">失败</string>
+    <string name="tasks_install">安装</string>
+    <string name="tasks_share">分享</string>
+    <string name="tasks_delete">删除</string>
+    <string name="tasks_open_dir">打开输出目录</string>
+    <string name="tasks_signed">已签名</string>
+    <string name="tasks_unsigned">未签名</string>
+
+    <string name="settings_title">设置</string>
+    <string name="settings_inject">默认注入配置</string>
+    <string name="settings_inject_summary">注入类名 / 原包过签 / 路径</string>
+    <string name="settings_signing">签名密钥</string>
+    <string name="settings_signing_builtin">内置密钥（sigkiller.p12）</string>
+    <string name="settings_signing_custom">自定义 keystore</string>
+    <string name="settings_output">输出目录</string>
+    <string name="settings_output_builtin">应用私有目录</string>
+    <string name="settings_output_public">Download/BaiSigKiller</string>
+    <string name="settings_appearance">外观</string>
+    <string name="settings_theme">主题</string>
+    <string name="settings_bottom_bar">底栏样式</string>
+    <string name="settings_ui_style">界面样式</string>
+    <string name="settings_about">关于</string>
+    <string name="settings_about_summary">原理、依赖与开源链接</string>
+    <string name="settings_clear_tasks">清空任务记录</string>
+
+    <string name="about_title">关于</string>
+    <string name="about_principles">原理</string>
+    <string name="about_principle_body">注入一个 ContentProvider 到目标应用的 AndroidManifest.xml，让它在 Application.onCreate 之前跑起来；运行时替换 PackageInfo.CREATOR，把签名换成原包签名；开启「使用原包过签」时再把原始 APK 释放到私有目录并用 xhook 接管 open/openat，让按文件读取签名的校验也读到原包。</string>
+    <string name="about_credits">参考实现：ApkSignatureKillerEx（L-JINBIN，Apache-2.0）、MT 去除签名校验、miuix（yukonga）、AndroidLiquidGlass（Kyant0）</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_loading">加载中…</string>
+    <string name="core_empty">暂无数据</string>
+    <string name="core_retry">重试</string>
+    <string name="core_refresh">刷新</string>
+    <string name="core_cancel">取消</string>
+    <string name="core_confirm">确定</string>
+    <string name="core_network_error">网络连接失败，请检查网络后重试</string>
+    <string name="core_session_expired">登录状态已过期，请重新登录</string>
+    <string name="core_unknown_error">发生未知错误</string>
+    <string name="core_native_missing">安全组件未初始化</string>
+    <string name="core_back">返回</string>
+    <string name="core_more">更多</string>
+    <string name="core_close">关闭</string>
+    <string name="core_delete">删除</string>
+    <string name="core_save">保存</string>
+    <string name="core_submit">提交</string>
+    <string name="core_error_format">服务端返回数据格式异常</string>
+    <string name="core_error_http">请求失败（HTTP %1$d）</string>
+    <string name="core_error_timeout">请求超时，请重试</string>
+    <string name="core_error_payload_too_large">请求内容过大</string>
+    <string name="core_error_rate_limited">操作过于频繁，请稍后再试</string>
+    <string name="core_settings">设置</string>
+    <string name="core_appearance">外观</string>
+    <string name="core_miuix">Miuix</string>
+    <string name="core_theme">主题</string>
+    <string name="core_theme_system">跟随系统</string>
+    <string name="core_theme_light">浅色</string>
+    <string name="core_theme_dark">深色</string>
+    <string name="core_theme_monet_system">动态取色（跟随系统）</string>
+    <string name="core_theme_monet_light">动态取色（浅色）</string>
+    <string name="core_theme_monet_dark">动态取色（深色）</string>
+    <string name="core_bottom_bar">底栏样式</string>
+    <string name="core_bottom_bar_default">默认</string>
+    <string name="core_bottom_bar_floating">悬浮底栏</string>
+    <string name="core_bottom_bar_liquid_glass">液态玻璃底栏</string>
+    <string name="core_bottom_bar_glass_unavailable">当前系统低于 Android 13，液态玻璃自动回退为悬浮底栏</string>
+    <string name="core_ui_style">界面样式</string>
+    <string name="core_ui_style_material3">Material 3</string>
+    <string name="core_ui_style_miuix">Miuix</string>
+    <string name="core_ui_style_restart">切换界面样式需重启应用生效</string>
+    <string name="core_search">搜索</string>
+    <string name="core_search_empty">没有匹配的内容</string>
+</resources>

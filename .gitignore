@@ -1,0 +1,19 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.keystore.bak
+*.jks
+
+# 本地 release 签名密钥（严禁提交）
+app/mbdev-sk.jks
+
+# 本地打许可头脚本（不进 git）
+scripts/add_license_header.sh
