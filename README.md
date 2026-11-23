@@ -16,7 +16,7 @@
 
 ## 预览
 
-> 界面示意图（Mockup），非真机截图；实际样式以构建产物为准。
+> 界面模拟图（Mockup）
 
 ![SigKiller 界面预览：应用列表 / 任务详情 / 设置](docs/preview.png)
 
