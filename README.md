@@ -4,6 +4,22 @@
 过签逻辑来自
 `ApkSignatureKillerEx` 的原理，重写成了可注入的载荷 + 一个纯 JVM 的 APK 补丁引擎。
 
+[![Android](https://img.shields.io/badge/Android-37%2B-3DDC84?logo=android&logoColor=white)](https://developer.android.com)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.4.21-A97BFF?logo=kotlin&logoColor=white)](https://kotlinlang.org)
+[![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
+[![Miuix](https://img.shields.io/badge/UI-Miuix-FF6B6B)](https://github.com/Kyuubang/Miuix)
+[![SignatureKiller](https://img.shields.io/badge/SignatureKiller-去签-3B6FF6)](https://github.com/mubai0122/SigKiller)
+[![JKS / apksig](https://img.shields.io/badge/签名-JKS%20%7C%20apksig-F5A623)](#)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-0A7AFF?logo=gnu&logoColor=white)](https://www.gnu.org/licenses/agpl-3.0)
+
+> 🌐 官网：[https://sigkiller.baiccb.cn/](https://sigkiller.baiccb.cn/) · GitHub：[https://github.com/mubai0122/SigKiller](https://github.com/mubai0122/SigKiller)
+
+## 预览
+
+> 界面示意图（Mockup），非真机截图；实际样式以构建产物为准。
+
+![SigKiller 界面预览：应用列表 / 任务详情 / 设置](docs/preview.png)
+
 ```
 SigKiller/
 ├── app/        Compose 界面：应用列表、任务队列、设置、注入配置弹窗
@@ -27,11 +43,12 @@ SigKiller/
 
 在原 APK 上修改，然后重签：
 
-1. **追加 dex**：把 `./killer.dex` 写成 `classesN.dex`，。
+1. **追加 dex**：把 `./killer.dex` 写成 `classesN.dex`。
 2. **改写 AndroidManifest.xml**：
    - 目标**没有**自定义 `Application` → 把 `<application android:name>` 设成 `<注入类名>.KillerApp`，
      hook 在 `attachBaseContext()` 跑；
-   - 目标**已有** `Application` → 不动它，改为插入一个 `<provider>`。provider 由系统在     `ActivityThread.installContentProviders()` 里创建，早于 `Application.onCreate()`；
+   - 目标**已有** `Application` → 不动它，改为插入一个 `<provider>`。provider 由系统在
+     `ActivityThread.installContentProviders()` 里创建，早于 `Application.onCreate()`；
    - 再写入若干 `<meta-data>`：原签名证书 base64、so 名、原包路径/解压路径。
 3. **注入 so**：`lib/<abi>/lib<注入so库名>.so`，一律 **STORED**（目标若声明
    `extractNativeLibs=false`，只有不压缩 + 页对齐才能被 `System.loadLibrary` 直接 mmap）。
@@ -66,7 +83,6 @@ Build-Tools 37、NDK 28.2.13676358、CMake 3.22.1。Gradle 用 9.3.1（AGP 9.1.0
 ```
 
 `prebuilt/SigKiller-debug.apk` 是已经编好的 debug 包（包名 `bai.sigkiller`），可直接安装。
-
 
 ## 五、改动过 killer/ 之后
 
