@@ -17,3 +17,6 @@ app/mbdev-sk.jks
 
 # 本地打许可头脚本（不进 git）
 scripts/add_license_header.sh
+
+# 服务端更新接口配置（不进 git）
+server/
